@@ -1,46 +1,44 @@
-# Quick Recap: Introduction to scRNA‑seq + CITE-seq
+# Repaso: scRNA-seq vs bulk-RNA-seq
 
-## scRNA-seq vs bulk-RNA-seq
+- **Bulk RNA-seq:** mide expresión promedio en un tejido; útil para detectar cambios globales, pero oculta heterogeneidad celular.
 
-- **Bulk RNA‑seq**: measures average gene expression in a tissue; useful for detecting global changes, but it hides cellular heterogeneity.
+  - **Insuficiente para:** estudios de desarrollo temprano o tejidos complejos como el cerebro.
 
-  - **Insufficient for**: early developmental studies or complex tissues such as the brain.
-
-[![Image source: Yan et al. 2024. Int J Biol Sci](figures/models.png){fig-align="center"}](https://www.ijbs.com/v20p2151.htm)
+[![Imagen tomada de: Yan et al. 2024. Int J Biol Sci](figures/models.png){fig-align="center"}](https://www.ijbs.com/v20p2151.htm)
 
 ## Single cell RNA-seq ([scRNA-seq]{.text-blue})
 
-- **First publication**: 2009 ([Tang *et al*, 2009](https://www.nature.com/articles/nmeth.1315))
-- **Popularity**: [2014](https://www.nature.com/articles/nmeth.2801)
-- **Estimate the distribution of gene expression levels** across a cell population.
-- **Analysis at the single‑cell level**.
-- **Reveals cell types**, including rare populations.
-- **Analyze temporal dynamics and heterogeneity**.
+- Primera publicación en 2009 ([Tang *et al*, 2009](https://www.nature.com/articles/nmeth.1315))
+- Popularidad en [2014](https://www.nature.com/articles/nmeth.2801)
+- Estimar la distribución de los **niveles de expresión de cada gen en una población celular**.
+- Análisis a **nivel de célula individual**
+- Permite revelar **tipos celulares** (poblaciones raras)
+- Analizar las **dinámicas temporales y heterogeneidad**.
 
-[![Image source: Single cell RNA sequencing](figures/overview%20SingleRNAseq.jpeg){fig-align="center"}](https://learn.gencore.bio.nyu.edu/transcriptomics/single_cell_rna_seq.html)
+[![Imagen tomada de: Single cell RNA sequencing](figures/overview%20SingleRNAseq.jpeg)](https://learn.gencore.bio.nyu.edu/transcriptomics/single_cell_rna_seq.html)
 
-## Heterogeneity: Internal diversity within a system or a set
+## Heterogeneidad: Diversidad interna de un sistema o de un conjunto
 
-- 🔬 **Not all cells are the same**: even within the same tissue, there are differences in cell types, functional states, and gene expression levels.
+- 🔬 **No todas las células son iguales:** incluso dentro de un mismo tejido, existen diferencias en *tipos celulares, estados funcionales y niveles de expresión génica*.
 
-- 🧬 **Genetic and transcriptomic variability**: each cell may express different genes or varying amounts of RNA, reflecting specific functions.
+- 🧬 **Variabilidad genética y transcriptómica:** cada célula puede expresar distintos genes o cantidades de RNA, reflejando funciones específicas.
 
-- 🩺 **Relevance in disease**: cellular heterogeneity explains why a tumor, for example, contains subpopulations with distinct behaviors (some more aggressive, others more sensitive to treatment).
+- 🩺 **Relevancia en enfermedad:** la heterogeneidad celular explica por qué un tumor, por ejemplo, contiene subpoblaciones con distintos comportamientos (algunas más agresivas, otras más sensibles a tratamiento).
 
-Visualization through **UMAP** (Uniform Manifold Approximation and Projection):
+Visualización a través de **UMAP** (Uniform Manifold Approximation and Projection):
 
-[![Image source: Explicación completa de un UMAP](figures/umap_example.png){fig-align="center"}](https://biostatsquid.com/umap-simply-explained/)
+[![Imagen tomada de: Explicación completa de un UMAP](figures/umap_example.png){fig-align="center"}](https://biostatsquid.com/umap-simply-explained/)
 
-## Questions scRNA‑seq can answer
+## **Preguntas que se pueden responde scRNA-seq**
 
-- **Discover new or rare cell types.**
-- **Identify differential cellular composition** between healthy vs. diseased samples.
-- **Understand cell differentiation** in development and regeneration.
-- **Analyze plasticity and expression dynamics** at the single‑cell level.
-- **Build cellular/genetic atlases** → comprehensive catalog of cellular diversity.
-- **Applications in basic research and personalized medicine.**
+- Descubrir **tipos celulares nuevos o raros**.
+- Identificar **composición celular diferencial** entre sano vs. enfermo.
+- Comprender la **diferenciación celular** en desarrollo y regeneración.
+- Analizar **plasticidad y dinámicas de expresión** en células individuales.
+- Construir **atlas celulares/genéticos** → catálogo completo de diversidad celular.
+- Aplicaciones en **investigación básica y medicina personalizada**.
 
-[![Image source: Kageyama, et al. 2018. Front. Neurosci](figures/scrnaseq.png){fig-align="center"}](https://www.frontiersin.org/journals/neuroscience/articles/10.3389/fnins.2018.00315/full)
+![Image source: Kageyama, et al. 2018. Front. Neurosci](figures/scrnaseq.png){alt="Image source: Kageyama, et al. 2018. Front. Neurosci" fig-align="center"}
 
 ## General Pipeline for scRNA‑seq with Seurat
 
@@ -92,7 +90,7 @@ CITE‑seq (**Cellular Indexing of Transcriptomes and Epitopes by Sequencing**) 
 - **Multimodal context** → CITE‑seq is part of the broader **multimodal analysis** frontier in single‑cell genomics, where multiple data types (RNA, ATAC, methylation, perturbations) are measured in the same cell.
 - **Applications** → improves cell type identification, refines clustering, and reveals functional states that RNA alone might miss.
 
-[![Schematic figure of (A) the CITE-seq antibody linked with the barcoded oligo (B) the CITE-seq protocol. Credit: Winston & Gregory Timp (2020), license: CC-BY 4.0](figures/cite-seq.png){fig-align="center"}](https://www.scdiscoveries.com/blog/knowledge/cite-seq/)
+![Schematic figure of (A) the CITE-seq antibody linked with the barcoded oligo (B) the CITE-seq protocol. Credit: Winston & Gregory Timp (2020), license: CC-BY 4.0](figures/cite-seq.png){alt="Schematic figure of (A) the CITE-seq antibody linked with the barcoded oligo (B) the CITE-seq protocol. Credit: Winston & Gregory Timp (2020), license: CC-BY 4.0" fig-align="center"}
 
 ## Overview
 
